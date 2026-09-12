@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Y: RISE OF THE CITY - GAME</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- THREE.JS IMPORTS -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- =================================================
+         3D GAME SCREEN
+    ================================================== -->
+
+    <div id="game-container"></div>
+
+
+    <!-- =================================================
+         GAME INFORMATION
+    ================================================== -->
+
+    <div class="game-ui">
+
+        <div class="game-title">
+            Y: RISE OF THE CITY
+        </div>
+
+
+        <div class="controls">
+
+            <strong>ON FOOT</strong><br>
+
+            W = FORWARD<br>
+            S = BACKWARD<br>
+            A = TURN LEFT<br>
+            D = TURN RIGHT<br><br>
+
+
+            <strong>VEHICLE</strong><br>
+
+            E = ENTER / EXIT<br>
+            W = ACCELERATE<br>
+            S = REVERSE<br>
+            A = STEER LEFT<br>
+            D = STEER RIGHT<br><br>
+
+
+            <strong>CAMERA</strong><br>
+
+            CLICK GAME + MOVE MOUSE<br>
+            ESC = RELEASE MOUSE
+
+        </div>
+
+
+        <!-- Current game state -->
+
+        <div
+            class="game-status"
+            id="game-status"
+        >
+            ON FOOT
+        </div>
+
+
+        <!-- Enter / Exit prompt -->
+
+        <div
+            class="interaction"
+            id="interaction"
+        >
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         GAME JAVASCRIPT
+    ================================================== -->
+
+    <script
+        type="module"
+        src="./game.js"
+    ></script>
+
+</body>
+
+</html>
